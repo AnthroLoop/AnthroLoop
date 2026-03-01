@@ -175,7 +175,6 @@ for i in $(seq 1 "$MAX_POLLS"); do
     "https://slack.com/api/conversations.replies?channel=${SLACK_CHANNEL_ID}&ts=${THREAD_TS}" \
     -H "Authorization: Bearer ${SLACK_BOT_TOKEN}")
 
-  local messages_count
   messages_count=$(echo "$local_response" | python3 -c "
 import sys, json
 data = json.load(sys.stdin)
@@ -185,7 +184,6 @@ print(len(msgs))
 
   if [ "$messages_count" -gt 1 ]; then
     # Check for non-bot replies
-    local reply
     reply=$(echo "$local_response" | python3 -c "
 import sys, json
 data = json.load(sys.stdin)
