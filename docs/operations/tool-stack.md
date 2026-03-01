@@ -13,6 +13,8 @@
 | CI/CD | GitHub Actions | Free | ¥0 | 自動テスト・デプロイ |
 | AI開発 | Claude Code | — | — | AI組織運営・開発 |
 | ホスティング | Vercel | Hobby (Free) | ¥0 | 透明性ホームページ（SSG） |
+| 通知（Slack） | Slack API | Free（Bot Token） | ¥0 | HILPエスカレーション通知・応答受信 |
+| 通知（LINE） | LINE Messaging API | Free tier | ¥0 | HILPモバイルアラート（一方向） |
 
 ---
 

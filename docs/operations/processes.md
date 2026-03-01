@@ -55,6 +55,31 @@
 
 ---
 
+## HILP外部通知プロセス
+
+### フロー
+1. AIがLevel 3以上のHILPを検出
+2. `scripts/hilp-escalate.sh` が Slack + LINE + macOS に通知
+3. CPOがSlackスレッドで応答
+4. スクリプトが応答を取得 → Claude Code に返却
+5. AIが応答に基づき業務継続
+
+### コンポーネント
+| コンポーネント | 用途 | 設定場所 |
+|--------------|------|---------|
+| `scripts/hilp-escalate.sh` | 通知送信・応答ポーリング | プロジェクトルート |
+| Slack Bot | 送受信チャネル | `.env` (SLACK_*) |
+| LINE Bot | モバイル通知 | `.env` (LINE_*) |
+| `.claude/settings.local.json` | 権限・フック設定 | プロジェクト設定 |
+
+### SLA
+- 通知送信: HILP検出から30秒以内
+- ポーリング間隔: 60秒
+- 最大待機: 20分
+- タイムアウト後: 会話内フォールバック
+
+---
+
 ## SOP一覧
 
 > プロダクト決定後にCOOが策定。
