@@ -12,6 +12,7 @@
 | VCS | GitHub | Free | ¥0 | ソースコード管理 |
 | CI/CD | GitHub Actions | Free | ¥0 | 自動テスト・デプロイ |
 | AI開発 | Claude Code | — | — | AI組織運営・開発 |
+| ホスティング | Vercel | Hobby (Free) | ¥0 | 透明性ホームページ（SSG） |
 
 ---
 
@@ -19,7 +20,7 @@
 
 | カテゴリ | 候補 | 月額目安 | 選定基準 |
 |---------|------|---------|---------|
-| ホスティング | Vercel / Cloudflare Pages | ¥0〜3,000 | 無料枠、DX |
+| ホスティング（プロダクト用） | Vercel / Cloudflare Pages | ¥0〜3,000 | 無料枠、DX |
 | DB | Supabase / PlanetScale | ¥0〜3,000 | 無料枠、スケーラビリティ |
 | 認証 | Supabase Auth / Clerk | ¥0〜2,000 | 無料枠、機能 |
 | 決済 | Stripe | 従量課金 | 日本対応、API品質 |
