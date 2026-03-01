@@ -14,9 +14,9 @@
 | **CFO** | AI | 財務モデリング、価格戦略、P&L | `/cfo` |
 | **CMO** | AI | マーケティング、SEO、グロース | `/cmo` |
 | **COO** | AI | オペレーション、プロセス自動化、KPI | `/coo` |
+| **Auditor** | AI（暫定: CEO兼務） | ガバナンス監査、リスク検出、バイアスチェック、情報分類統括 | `/ceo` |
 | **Board** | AI全役職 | 部門横断の意思決定会議 | `/board` |
 | **Sprint** | AI全役職 | 2週間スプリント管理 | `/sprint` |
-<!-- Phase 1 (Month 3-6): Auditor — ガバナンス監査、リスク検出、バイアスチェック、情報分類統括 -->
 <!-- Phase 2 (Month 6-12): CHRO — AIロール管理、組織設計 -->
 <!-- Phase 2 (Month 6-12): BU Lead — パラメータ化スキル、事業P&L責任 -->
 
@@ -40,7 +40,8 @@
 | ポートフォリオ資源配分 | CEO | **CPO** | CFO, BU Leads | CTO, CMO, COO |
 | 情報分類の格上げ（→Confidential） | Auditor | **CPO** | 管轄役職 | 全員 |
 | 情報分類の格下げ | Auditor | **CPO** | 管轄役職 | 全員 |
-| ファントムストック付与 | CFO | **CPO** | CTO/CMO, Auditor | CEO |
+| ファントムストック付与（10ユニット以下） | CFO | CEO | CTO/CMO, Auditor | CPO |
+| ファントムストック付与（11ユニット以上） | CFO | **CPO** | CTO/CMO, Auditor | CEO |
 | ファントムストック キャッシュアウト | CFO | **CPO** | Auditor | CEO, COO |
 
 > **CPO(人間)が承認者の項目は、必ずHILPプロトコルを通す。**
@@ -105,7 +106,7 @@
 | 意思決定権限 | `.claude/rules/decision-framework.md` | CEO | — |
 | 収益KPI定義 | `.claude/rules/revenue-targets.md` | CFO | — |
 | ポートフォリオ戦略 | `docs/strategy/portfolio/` | CEO | 個別BU docs |
-| ガバナンス | `docs/governance/` | Auditor(Phase 1+) | — |
+| ガバナンス | `docs/governance/` | Auditor | — |
 | 情報分類ポリシー | `docs/governance/information-classification.md` | Auditor | 他ドキュメント |
 | ファントムストック制度 | `docs/governance/phantom-stock-program.md` | CFO + Auditor | 個別契約書 |
 
